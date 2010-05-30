@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/Genogram/src"
+    modelPluginID="Genogram" modelName="Genogram" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>Genogram.ecore</foreignModel>
+  <genPackages prefix="Genogram" disposableProviderFactory="true" ecorePackage="Genogram.ecore#/">
+    <genClasses image="false" ecoreClass="Genogram.ecore#//Entity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Genogram.ecore#//Entity/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Genogram.ecore#//Entity/DateOfBirth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Genogram.ecore#//Entity/DateOfDeath"/>
+    </genClasses>
+    <genClasses ecoreClass="Genogram.ecore#//Genogram">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Genogram.ecore#//Genogram/hasRelations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Genogram.ecore#//Genogram/hasEntities"/>
+    </genClasses>
+    <genClasses ecoreClass="Genogram.ecore#//Man"/>
+    <genClasses ecoreClass="Genogram.ecore#//Woman"/>
+    <genClasses ecoreClass="Genogram.ecore#//Marriage"/>
+    <genClasses ecoreClass="Genogram.ecore#//Engagement"/>
+    <genClasses ecoreClass="Genogram.ecore#//Cohabitation"/>
+    <genClasses image="false" ecoreClass="Genogram.ecore#//FamilyRelation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Genogram.ecore#//FamilyRelation/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Genogram.ecore#//FamilyRelation/children"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Genogram.ecore#//FamilyRelation/target"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
