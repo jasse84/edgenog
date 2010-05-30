@@ -20,7 +20,7 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="GGram.gmftool#//@palette/@tools.0/@tools.3"/>
+          href="GGram.gmftool#//@palette/@tools.0/@tools.1"/>
       <diagramNode
           href="GGram.gmfgraph#Woman"/>
     </ownedChild>
@@ -40,7 +40,7 @@
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
-          href="GGram.gmftool#//@palette/@tools.0/@tools.9"/>
+          href="GGram.gmftool#//@palette/@tools.0/@tools.0"/>
       <diagramNode
           href="GGram.gmfgraph#Man"/>
     </ownedChild>
