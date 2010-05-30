@@ -8,22 +8,34 @@
   <genPackages prefix="GGram" disposableProviderFactory="true" ecorePackage="GGram.ecore#/">
     <genClasses image="false" ecoreClass="GGram.ecore#//Entity">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GGram.ecore#//Entity/Name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GGram.ecore#//Entity/DatOfBirth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GGram.ecore#//Entity/DateOfBirth"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GGram.ecore#//Entity/DateOfDeath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GGram.ecore#//Entity/Profession"/>
     </genClasses>
     <genClasses ecoreClass="GGram.ecore#//Man"/>
     <genClasses ecoreClass="GGram.ecore#//Woman"/>
     <genClasses ecoreClass="GGram.ecore#//Genogram">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GGram.ecore#//Genogram/hasEntities"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GGram.ecore#//Genogram/hasRelations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GGram.ecore#//Genogram/hasChildRelations"/>
     </genClasses>
     <genClasses image="false" ecoreClass="GGram.ecore#//FamiliRelation">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GGram.ecore#//FamiliRelation/source"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GGram.ecore#//FamiliRelation/target"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GGram.ecore#//FamiliRelation/children"/>
     </genClasses>
     <genClasses ecoreClass="GGram.ecore#//Marriage"/>
     <genClasses ecoreClass="GGram.ecore#//Cohabitation"/>
     <genClasses ecoreClass="GGram.ecore#//Engagement"/>
+    <genClasses image="false" ecoreClass="GGram.ecore#//HasChildRelation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GGram.ecore#//HasChildRelation/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GGram.ecore#//HasChildRelation/target"/>
+    </genClasses>
+    <genClasses ecoreClass="GGram.ecore#//Divorce"/>
+    <genClasses ecoreClass="GGram.ecore#//Relationship"/>
+    <genClasses ecoreClass="GGram.ecore#//Nullity"/>
+    <genClasses ecoreClass="GGram.ecore#//LoveAffair"/>
+    <genClasses ecoreClass="GGram.ecore#//CohabitationAndSeparation"/>
+    <genClasses ecoreClass="GGram.ecore#//HasAdoptedChild"/>
+    <genClasses ecoreClass="GGram.ecore#//HasChild"/>
   </genPackages>
 </genmodel:GenModel>

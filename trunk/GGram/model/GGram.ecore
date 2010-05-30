@@ -5,8 +5,9 @@
     nsURI="http://ggram" nsPrefix="ggram">
   <eClassifiers xsi:type="ecore:EClass" name="Entity" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="DatOfBirth" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="DateOfDeath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="DateOfBirth" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="DateOfDeath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Profession" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Man" eSuperTypes="#//Entity"/>
   <eClassifiers xsi:type="ecore:EClass" name="Woman" eSuperTypes="#//Entity"/>
@@ -15,16 +16,29 @@
         eType="#//Entity" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="hasRelations" upperBound="-1"
         eType="#//FamiliRelation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasChildRelations" upperBound="-1"
+        eType="#//HasChildRelation" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FamiliRelation" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
         eType="#//Woman"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
         eType="#//Man"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
-        eType="#//Entity"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Marriage" eSuperTypes="#//FamiliRelation"/>
   <eClassifiers xsi:type="ecore:EClass" name="Cohabitation" eSuperTypes="#//FamiliRelation"/>
   <eClassifiers xsi:type="ecore:EClass" name="Engagement" eSuperTypes="#//FamiliRelation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="HasChildRelation" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//FamiliRelation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//Entity"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Divorce" eSuperTypes="#//FamiliRelation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Relationship" eSuperTypes="#//FamiliRelation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Nullity" eSuperTypes="#//FamiliRelation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LoveAffair" eSuperTypes="#//FamiliRelation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CohabitationAndSeparation" eSuperTypes="#//FamiliRelation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="HasAdoptedChild" eSuperTypes="#//HasChildRelation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="HasChild" eSuperTypes="#//HasChildRelation"/>
 </ecore:EPackage>
