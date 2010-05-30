@@ -12,11 +12,33 @@
       <domainMetaElement
           href="GGram.ecore#//Woman"/>
       <labelMappings
-          xsi:type="gmfmap:FeatureLabelMapping">
+          xsi:type="gmfmap:FeatureLabelMapping"
+          viewPattern="">
         <diagramLabel
-            href="GGram.gmfgraph#WomanName"/>
+            href="GGram.gmfgraph#Name"/>
         <features
             href="GGram.ecore#//Entity/Name"/>
+      </labelMappings>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="GGram.gmfgraph#Profession"/>
+        <features
+            href="GGram.ecore#//Entity/Profession"/>
+      </labelMappings>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="GGram.gmfgraph#Date of birth"/>
+        <features
+            href="GGram.ecore#//Entity/DateOfBirth"/>
+      </labelMappings>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="GGram.gmfgraph#Date of death"/>
+        <features
+            href="GGram.ecore#//Entity/DateOfDeath"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
@@ -34,9 +56,30 @@
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping">
         <diagramLabel
-            href="GGram.gmfgraph#ManName"/>
+            href="GGram.gmfgraph#MName"/>
         <features
             href="GGram.ecore#//Entity/Name"/>
+      </labelMappings>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="GGram.gmfgraph#MProfession"/>
+        <features
+            href="GGram.ecore#//Entity/Profession"/>
+      </labelMappings>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="GGram.gmfgraph#MDate of birth"/>
+        <features
+            href="GGram.ecore#//Entity/DateOfBirth"/>
+      </labelMappings>
+      <labelMappings
+          xsi:type="gmfmap:FeatureLabelMapping">
+        <diagramLabel
+            href="GGram.gmfgraph#MDate of death"/>
+        <features
+            href="GGram.ecore#//Entity/DateOfDeath"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"

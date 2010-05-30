@@ -22,9 +22,9 @@
           title="Woman"
           description="Create new Woman">
         <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
+            xsi:type="gmftool:BundleImage"
+            path="/icons/Woman.png"
+            bundle="org.eclipse.gmf.ggram.edit"/>
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
