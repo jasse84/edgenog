@@ -9,25 +9,71 @@
         name="ManFigure">
       <actualFigure
           xsi:type="gmfgraph:Rectangle"
-          name="ManFigure">
+          name="ManFigure"
+          lineWidth="3">
         <layout
-            xsi:type="gmfgraph:FlowLayout"/>
+            xsi:type="gmfgraph:GridLayout"
+            equalWidth="false">
+          <margins
+              dx="30"
+              dy="30"/>
+        </layout>
+        <foregroundColor
+            xsi:type="gmfgraph:RGBColor"
+            blue="255"/>
+        <backgroundColor
+            xsi:type="gmfgraph:RGBColor"
+            red="223"
+            green="247"
+            blue="247"/>
+        <maximumSize
+            dx="200"
+            dy="200"/>
+        <minimumSize
+            dx="50"
+            dy="50"/>
+        <preferredSize
+            dx="150"
+            dy="150"/>
         <children
             xsi:type="gmfgraph:Label"
             name="ManNameFigure"
-            text="&lt;...>"/>
+            text="Name">
+          <font
+              xsi:type="gmfgraph:BasicFont"
+              faceName="MName"
+              style="BOLD"/>
+        </children>
         <children
             xsi:type="gmfgraph:Label"
             name="ManDateOfBirthFigure"
-            text="&lt;...>"/>
+            text="Date of birth:">
+          <font
+              xsi:type="gmfgraph:BasicFont"
+              faceName="MDateB"
+              height="8"
+              style="ITALIC"/>
+        </children>
         <children
             xsi:type="gmfgraph:Label"
             name="ManDateOfDeathFigure"
-            text="&lt;...>"/>
+            text="Daste of death:">
+          <font
+              xsi:type="gmfgraph:BasicFont"
+              faceName="MDateD"
+              height="8"
+              style="ITALIC"/>
+        </children>
         <children
             xsi:type="gmfgraph:Label"
             name="ManProfessionFigure"
-            text="&lt;...>"/>
+            text="Profession:">
+          <font
+              xsi:type="gmfgraph:BasicFont"
+              faceName="MProfession"
+              height="8"
+              style="ITALIC"/>
+        </children>
       </actualFigure>
       <accessors
           figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
@@ -41,95 +87,191 @@
     <descriptors
         name="WomanFigure">
       <actualFigure
-          xsi:type="gmfgraph:Rectangle"
-          name="WomanFigure">
+          xsi:type="gmfgraph:Ellipse"
+          name="WomanFigure"
+          lineWidth="3">
         <layout
-            xsi:type="gmfgraph:FlowLayout"/>
+            xsi:type="gmfgraph:GridLayout"
+            equalWidth="false">
+          <margins
+              dx="30"
+              dy="30"/>
+        </layout>
+        <foregroundColor
+            xsi:type="gmfgraph:RGBColor"
+            red="255"/>
+        <backgroundColor
+            xsi:type="gmfgraph:RGBColor"
+            red="251"
+            green="202"
+            blue="205"/>
+        <maximumSize
+            dx="200"
+            dy="200"/>
+        <minimumSize
+            dx="50"
+            dy="50"/>
+        <preferredSize
+            dx="150"
+            dy="150"/>
+        <size
+            x="150"
+            y="150"/>
         <children
             xsi:type="gmfgraph:Label"
             name="WomanNameFigure"
-            text="&lt;...>"/>
+            text="Name">
+          <font
+              xsi:type="gmfgraph:BasicFont"
+              faceName="WName"
+              style="BOLD"/>
+        </children>
         <children
             xsi:type="gmfgraph:Label"
             name="WomanDateOfBirthFigure"
-            text="&lt;...>"/>
+            text="Date of birth">
+          <font
+              xsi:type="gmfgraph:BasicFont"
+              faceName="DBirth"
+              height="8"
+              style="ITALIC"/>
+        </children>
         <children
             xsi:type="gmfgraph:Label"
             name="WomanDateOfDeathFigure"
-            text="&lt;...>"/>
+            text="Date of death">
+          <font
+              xsi:type="gmfgraph:BasicFont"
+              faceName="DDeath"
+              height="8"
+              style="ITALIC"/>
+        </children>
         <children
             xsi:type="gmfgraph:Label"
             name="WomanProfessionFigure"
-            text="&lt;...>"/>
+            text="Profession">
+          <font
+              xsi:type="gmfgraph:BasicFont"
+              faceName="WProfession"
+              height="8"
+              style="ITALIC"/>
+        </children>
       </actualFigure>
       <accessors
-          figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+          accessor="getFigureWomanProfessionFigure"
+          figure="//@figures.0/@descriptors.1/@actualFigure/@children.3"/>
       <accessors
-          figure="//@figures.0/@descriptors.1/@actualFigure/@children.1"/>
-      <accessors
+          accessor="getFigureWomanDateOfDeathFigure"
           figure="//@figures.0/@descriptors.1/@actualFigure/@children.2"/>
       <accessors
-          figure="//@figures.0/@descriptors.1/@actualFigure/@children.3"/>
+          accessor="getFigureWomanDateOfBirthFigure"
+          figure="//@figures.0/@descriptors.1/@actualFigure/@children.1"/>
+      <accessors
+          accessor="getFigureWomanNameFigure"
+          figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors
         name="MarriageFigure">
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
-          name="MarriageFigure"/>
+          name="MarriageFigure"
+          lineWidth="3">
+        <foregroundColor
+            xsi:type="gmfgraph:RGBColor"/>
+      </actualFigure>
     </descriptors>
     <descriptors
         name="CohabitationFigure">
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
-          name="CohabitationFigure"/>
+          name="CohabitationFigure"
+          lineWidth="3">
+        <foregroundColor
+            xsi:type="gmfgraph:RGBColor"
+            green="255"/>
+      </actualFigure>
     </descriptors>
     <descriptors
         name="EngagementFigure">
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
-          name="EngagementFigure"/>
+          name="EngagementFigure"
+          lineWidth="3">
+        <foregroundColor
+            xsi:type="gmfgraph:RGBColor"
+            blue="255"/>
+      </actualFigure>
     </descriptors>
     <descriptors
         name="DivorceFigure">
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
-          name="DivorceFigure"/>
+          name="DivorceFigure"
+          lineWidth="3"
+          lineKind="LINE_DOT">
+        <foregroundColor
+            xsi:type="gmfgraph:RGBColor"/>
+      </actualFigure>
     </descriptors>
     <descriptors
         name="RelationshipFigure">
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
-          name="RelationshipFigure"/>
+          name="RelationshipFigure"
+          lineWidth="3">
+        <foregroundColor
+            xsi:type="gmfgraph:RGBColor"
+            green="255"
+            blue="255"/>
+      </actualFigure>
     </descriptors>
     <descriptors
         name="NullityFigure">
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
-          name="NullityFigure"/>
+          name="NullityFigure"
+          lineWidth="3"
+          lineKind="LINE_DOT"/>
     </descriptors>
     <descriptors
         name="LoveAffairFigure">
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
-          name="LoveAffairFigure"/>
+          name="LoveAffairFigure"
+          lineWidth="3"
+          lineKind="LINE_DOT">
+        <foregroundColor
+            xsi:type="gmfgraph:RGBColor"
+            red="251"
+            green="202"
+            blue="205"/>
+      </actualFigure>
     </descriptors>
     <descriptors
         name="CohabitationAndSeparationFigure">
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
-          name="CohabitationAndSeparationFigure"/>
+          name="CohabitationAndSeparationFigure"
+          lineKind="LINE_DOT">
+        <foregroundColor
+            xsi:type="gmfgraph:RGBColor"
+            green="255"/>
+      </actualFigure>
     </descriptors>
     <descriptors
         name="HasAdoptedChildFigure">
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
-          name="HasAdoptedChildFigure"/>
+          name="HasAdoptedChildFigure"
+          lineWidth="3"
+          lineKind="LINE_DOT"/>
     </descriptors>
     <descriptors
         name="HasChildFigure">
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
-          name="HasChildFigure"/>
+          name="HasChildFigure"
+          lineWidth="3"/>
     </descriptors>
   </figures>
   <nodes
@@ -169,35 +311,35 @@
       name="HasChild"
       figure="HasChildFigure"/>
   <labels
-      name="ManName"
+      name="MName"
       figure="ManFigure"
       accessor="//@figures.0/@descriptors.0/@accessors.0"/>
   <labels
-      name="ManDateOfBirth"
+      name="MDate of birth"
       figure="ManFigure"
       accessor="//@figures.0/@descriptors.0/@accessors.1"/>
   <labels
-      name="ManDateOfDeath"
+      name="MDate of death"
       figure="ManFigure"
       accessor="//@figures.0/@descriptors.0/@accessors.2"/>
   <labels
-      name="ManProfession"
+      name="MProfession"
       figure="ManFigure"
       accessor="//@figures.0/@descriptors.0/@accessors.3"/>
   <labels
-      name="WomanName"
+      name="Name"
       figure="WomanFigure"
-      accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+      accessor="//@figures.0/@descriptors.1/@accessors.3"/>
   <labels
-      name="WomanDateOfBirth"
-      figure="WomanFigure"
-      accessor="//@figures.0/@descriptors.1/@accessors.1"/>
-  <labels
-      name="WomanDateOfDeath"
+      name="Date of birth"
       figure="WomanFigure"
       accessor="//@figures.0/@descriptors.1/@accessors.2"/>
   <labels
-      name="WomanProfession"
+      name="Date of death"
       figure="WomanFigure"
-      accessor="//@figures.0/@descriptors.1/@accessors.3"/>
+      accessor="//@figures.0/@descriptors.1/@accessors.1"/>
+  <labels
+      name="Profession"
+      figure="WomanFigure"
+      accessor="//@figures.0/@descriptors.1/@accessors.0"/>
 </gmfgraph:Canvas>
