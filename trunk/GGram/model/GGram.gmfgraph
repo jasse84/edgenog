@@ -175,7 +175,7 @@
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
           name="MarriageFigure"
-          lineWidth="3">
+          lineWidth="5">
         <foregroundColor
             xsi:type="gmfgraph:RGBColor"/>
       </actualFigure>
@@ -185,10 +185,12 @@
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
           name="CohabitationFigure"
-          lineWidth="3">
+          lineWidth="5">
         <foregroundColor
             xsi:type="gmfgraph:RGBColor"
-            green="255"/>
+            red="38"
+            green="147"
+            blue="38"/>
       </actualFigure>
     </descriptors>
     <descriptors
@@ -196,7 +198,7 @@
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
           name="EngagementFigure"
-          lineWidth="3">
+          lineWidth="5">
         <foregroundColor
             xsi:type="gmfgraph:RGBColor"
             blue="255"/>
@@ -207,8 +209,14 @@
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
           name="DivorceFigure"
-          lineWidth="3"
+          lineWidth="5"
           lineKind="LINE_DOT">
+        <layout
+            xsi:type="gmfgraph:BorderLayout">
+          <spacing
+              dx="100"
+              dy="100"/>
+        </layout>
         <foregroundColor
             xsi:type="gmfgraph:RGBColor"/>
       </actualFigure>
@@ -218,11 +226,11 @@
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
           name="RelationshipFigure"
-          lineWidth="3">
+          lineWidth="5">
         <foregroundColor
             xsi:type="gmfgraph:RGBColor"
-            green="255"
-            blue="255"/>
+            red="255"
+            green="144"/>
       </actualFigure>
     </descriptors>
     <descriptors
@@ -230,21 +238,25 @@
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
           name="NullityFigure"
-          lineWidth="3"
-          lineKind="LINE_DOT"/>
+          lineWidth="5"
+          lineKind="LINE_DOT">
+        <foregroundColor
+            xsi:type="gmfgraph:RGBColor"
+            blue="255"/>
+      </actualFigure>
     </descriptors>
     <descriptors
         name="LoveAffairFigure">
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
           name="LoveAffairFigure"
-          lineWidth="3"
+          lineWidth="5"
           lineKind="LINE_DOT">
         <foregroundColor
             xsi:type="gmfgraph:RGBColor"
-            red="251"
-            green="202"
-            blue="205"/>
+            red="227"
+            green="20"
+            blue="20"/>
       </actualFigure>
     </descriptors>
     <descriptors
@@ -252,10 +264,13 @@
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
           name="CohabitationAndSeparationFigure"
+          lineWidth="5"
           lineKind="LINE_DOT">
         <foregroundColor
             xsi:type="gmfgraph:RGBColor"
-            green="255"/>
+            red="38"
+            green="147"
+            blue="38"/>
       </actualFigure>
     </descriptors>
     <descriptors
@@ -263,15 +278,27 @@
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
           name="HasAdoptedChildFigure"
-          lineWidth="3"
-          lineKind="LINE_DOT"/>
+          lineWidth="5"
+          lineKind="LINE_DOT">
+        <foregroundColor
+            xsi:type="gmfgraph:RGBColor"
+            red="160"
+            green="77"
+            blue="112"/>
+      </actualFigure>
     </descriptors>
     <descriptors
         name="HasChildFigure">
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
           name="HasChildFigure"
-          lineWidth="3"/>
+          lineWidth="5">
+        <foregroundColor
+            xsi:type="gmfgraph:RGBColor"
+            red="160"
+            green="77"
+            blue="112"/>
+      </actualFigure>
     </descriptors>
   </figures>
   <nodes
@@ -313,33 +340,43 @@
   <labels
       name="MName"
       figure="ManFigure"
+      elementIcon="false"
       accessor="//@figures.0/@descriptors.0/@accessors.0"/>
   <labels
       name="MDate of birth"
       figure="ManFigure"
+      elementIcon="false"
       accessor="//@figures.0/@descriptors.0/@accessors.1"/>
   <labels
       name="MDate of death"
       figure="ManFigure"
+      elementIcon="false"
       accessor="//@figures.0/@descriptors.0/@accessors.2"/>
   <labels
       name="MProfession"
       figure="ManFigure"
+      elementIcon="false"
       accessor="//@figures.0/@descriptors.0/@accessors.3"/>
   <labels
       name="Name"
       figure="WomanFigure"
+      elementIcon="false"
       accessor="//@figures.0/@descriptors.1/@accessors.3"/>
   <labels
       name="Date of birth"
       figure="WomanFigure"
+      elementIcon="false"
       accessor="//@figures.0/@descriptors.1/@accessors.2"/>
   <labels
       name="Date of death"
       figure="WomanFigure"
+      elementIcon="false"
       accessor="//@figures.0/@descriptors.1/@accessors.1"/>
   <labels
       name="Profession"
       figure="WomanFigure"
+      elementIcon="false"
       accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+  <labels
+      name="Diagram label Mariage"/>
 </gmfgraph:Canvas>
