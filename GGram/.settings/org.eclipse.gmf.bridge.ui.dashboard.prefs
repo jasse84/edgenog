@@ -1,0 +1,8 @@
+#Sun May 30 18:59:37 EEST 2010
+eclipse.preferences.version=1
+gmf_dashboard/domainGenerationModel=platform\:/resource/GGram/model/GGram.genmodel
+gmf_dashboard/domainModel=platform\:/resource/GGram/model/GGram.ecore
+gmf_dashboard/generationModel=platform\:/resource/GGram/model/GGram.gmfgen
+gmf_dashboard/graphicalDefinitionModel=platform\:/resource/GGram/model/GGram.gmfgraph
+gmf_dashboard/mappingModel=platform\:/resource/GGram/model/GGram.gmfmap
+gmf_dashboard/toolingDefinitionModel=platform\:/resource/GGram/model/GGram.gmftool
