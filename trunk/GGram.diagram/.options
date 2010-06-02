@@ -1,0 +1,7 @@
+# Tracing options for the GGram.diagram plug-in
+
+# Common issues
+GGram.diagram/debug=false
+
+# Visual IDs
+GGram.diagram/debug/visualID=false
