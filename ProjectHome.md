@@ -1,0 +1,1 @@
+A simple graphical editor to create genograms.
